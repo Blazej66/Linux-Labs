@@ -1,0 +1,212 @@
+LINUX answer NO 1
+
+Question: What does the pwd command do?
+
+Print working directory
+
+6. Run the command cd tests
+Question: What will pwd show after running this?
+
+/root/tests
+
+7. Run the command cd ..
+Question: Which folder did you move to?
+
+/root
+
+8. Run the command cd /.
+Questions: Which folder did you move to? What directories does it contain? Can you run cd ..
+from here?
+
+/%  , changes direction to root directory , I can use cd in here 
+
+9. Run the command cd .
+Question: Which folder are you in?
+
+Root/
+
+10. Run the command ls > files.txt.
+Question: Did the file list appear on the screen?
+
+File created, not appeared on the screen 
+
+11. Run the command less pliki.txt.
+Question: Did the file list appear on the screen?
+
+Appeared on screen 
+
+12. Question: What appeared on the screen? Why?
+
+List context of directories 
+
+13. Run the command ls -l.
+Question: How does this differ from ls -a and ls?
+
+ displays all files in the current directory in "long format," which includes
+the file type (first character of the line: d for directory, “
+-
+“ for regular file, l for
+link), access permissions, number of links, owner, group name, file size (in bytes),
+last modification date
+
+17. Move the file files.txt to the data folder using the mv command.
+Question: Did files.txt disappear from your current directory?
+
+Yes
+
+18. Remove the test folder using the rmdir command.
+Question: Were you able to remove the folder?
+
+No 
+
+19. Use the rm command.
+Question: Can it remove directories with rm?
+
+Yes
+
+21. Open Vim and type:
+<html><body>Test</body></html>
+- Save the text to index.html.
+- Run :syntax on.
+- Question: Did the appearance of the text change? 
+
+Yes 
+
+How to quickly move to the beginning/end of a text/line?
+
+0 and $ 
+
+- How to jump across words?
+
+w, b, e, ge
+move word at a time
+
+- How to move text blocks?
+H,J,K,L 
+
+- How to copy text blocks?
+
+yy
+
+- How to delete text blocks? How do you undo and redo changes in Vim?
+
+Delete by: d  and x 
+redo by control + r  , or  u 
+
+- How can you search for specific words or patterns in a file?
+/ search specific word then N 
+
+
+- Search and Replace Using the substitute Command
+
+We can also use the Vim editor substitute command to perform basic and advanced search and replace functions.
+The substitute command has this basic syntax:
+
+:s/<search_phrase>/<replace_phrase>/options
+
+- How can you delete a line in Vim?
+
+D and D 
+
+- How do you copy (yank) and paste text in Vim?
+
+* yy - Yank (copy) a line
+* p - Paste after cursor
+* P - Paste before cursor
+
+- How can you open multiple files in Vim and switch between them?
+
+Switch
+- :tabn
+- :tabp
+
+To open a new file, I use
+:e ../myFile.pl
+
+Switching
+To switch between all open files, I use
+:b myfile
+
+Open multiple files 
+Ctrl + p 
+
+- How do you split the window in Vim for editing multiple files simultaneously?
+
+Open file with horizontal split:
+    - :split filename 
+
+Open the same file 
+- :split 
+
+Vertical split 
+
+Open file in vertical split:
+* :vsplit filename
+
+You can switch between splits using:
+* Ctrl-w h (left)
+* Ctrl-w j (down)
+* Ctrl-w k (up)
+* Ctrl-w l (right)
+
+You can resize the splits using:
+* Ctrl-w + (increase height)
+* Ctrl-w - (decrease height)
+* Ctrl-w > (increase width)
+* Ctrl-w < (decrease width)
+
+
+For relative line numbers, which show the number of lines to the current line, use:
+- :set relativenumber
+
+
+- How can you configure auto-indentation in Vim?
+* :set autoindent
+* :set smartindent
+
+
+- How do you save changes without exiting Vim
+- :w 
+- :w filename 
+
+- How do you set syntax highlighting for different programming languages in Vim?
+
+Enable syntax
+- :syntax on 
+
+Filetype detection 
+- :filetype on 
+
+:set filetype=language ( like python) 
+
+Make it permanent:
+
+syntax on 
+filetype plugin indent on
+
+
+
+- How do you move a block of text to a different location in Vim?
+
+
+1.Press V and select a block of lines.
+2.Press d to cut them.
+3.Move the cursor to the desired location.
+4.Press p to paste the block.
+
+- How can you jump to a specific line number in Vim?
+- Type : followed by the line number and press Enter. For example, to go to line 42, you would enter: :42 
+
+- Using gg command then use 42G to go to 42 line 
+
+
+
+
+- How do you edit files in read-only mode in Vim
+* Use :w! to force write, or
+* Issue :set noreadonly and then just use normal :w
+
+* Issue: :w !sudo tee %. This will write the buffer to tee, a command that receives pipe information and can write to files. And as tee is run with sudo powers, tee can modify the file.
+
+* Use :w! ~/tempfile.ext to write your changes to a temporary file and then take measures to move the temp file to the directory (send the temp file to the directory owner/admin).
+
